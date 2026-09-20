@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
       opacity: 1, 
       y: 0,
       filter: "blur(0px)",
-      transition: { type: "spring", stiffness: 80, damping: 20 }
+      transition: { type: "spring" as const, stiffness: 80, damping: 20 }
     }
   };
 
@@ -98,3 +98,4 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+

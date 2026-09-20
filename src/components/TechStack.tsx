@@ -17,7 +17,7 @@ const TechStack: React.FC = () => {
       opacity: 1, 
       y: 0,
       filter: "blur(0px)",
-      transition: { type: "spring", stiffness: 80, damping: 20 }
+      transition: { type: "spring" as const, stiffness: 80, damping: 20 }
     }
   };
 
@@ -28,7 +28,7 @@ const TechStack: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          transition={{ type: "spring" as const, stiffness: 100, damping: 20 }}
           className="mb-8"
         >
           <h2 className="text-3xl font-display font-semibold tracking-tight text-white">
@@ -69,3 +69,4 @@ const TechStack: React.FC = () => {
 };
 
 export default TechStack;
+

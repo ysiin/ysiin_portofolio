@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       opacity: 1, 
       y: 0, 
       filter: "blur(0px)",
-      transition: { type: "spring", stiffness: 80, damping: 20 }
+      transition: { type: "spring" as const, stiffness: 80, damping: 20 }
     }
   };
 
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          transition={{ type: "spring" as const, stiffness: 100, damping: 20 }}
           className="mb-8"
         >
           <h2 className="text-3xl font-display font-semibold tracking-tight text-white">
@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
               rel="noopener noreferrer"
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              transition={{ type: "spring" as const, stiffness: 300, damping: 25 }}
               className={`group block bg-[#0a0a0a] border border-white/10 rounded-[32px] p-8 md:p-10 hover:border-white/20 hover:bg-[#0f0f0f] transition-all duration-300 ${
                 index === 2 ? 'md:col-span-2' : ''
               }`}
@@ -101,3 +101,4 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
+

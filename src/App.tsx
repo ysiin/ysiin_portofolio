@@ -4,7 +4,6 @@ import Experience from './components/Experience';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
-import { motion } from 'framer-motion';
 
 function App() {
   return (
@@ -29,3 +28,4 @@ function App() {
 }
 
 export default App;
+

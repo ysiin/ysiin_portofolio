@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        transition={{ type: "spring" as const, stiffness: 100, damping: 20 }}
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-neutral-950/90 backdrop-blur-xl py-4 border-b border-white/5' : 'bg-transparent py-8'}`}
       >
         <div className="container mx-auto px-6 max-w-5xl flex justify-between items-center">
@@ -104,3 +104,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
